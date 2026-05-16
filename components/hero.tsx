@@ -25,7 +25,7 @@ export function Hero() {
       >
         <div className="inline-flex items-center gap-2 rounded-full border border-cyan-200 bg-white/80 px-4 py-2 text-sm font-semibold text-slate-600 shadow-sm backdrop-blur">
           <Sparkles className="h-4 w-4 text-cyan-500" />
-          Premium AI tools, prompts, systems, and workflows
+          Free starter guide for self-taught AI builders
         </div>
 
         <div className="space-y-5">
@@ -46,7 +46,7 @@ export function Hero() {
             className="rounded-full bg-cyan-500 font-bold text-white shadow-lg shadow-cyan-500/20 hover:bg-cyan-400"
           >
             <a href="#pricing">
-              Start Building <ArrowRight className="h-5 w-5" />
+              Get the Free Guide <ArrowRight className="h-5 w-5" />
             </a>
           </Button>
           <Button

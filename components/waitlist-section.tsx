@@ -8,6 +8,8 @@ const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 type Status = "idle" | "loading" | "success" | "error";
 
+const starterGuideUrl = "/the-ai-vault-starter-guide.pdf";
+
 export function WaitlistSection() {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<Status>("idle");
@@ -34,14 +36,17 @@ export function WaitlistSection() {
         },
         body: JSON.stringify({ email: trimmedEmail }),
       });
-      const data = (await response.json()) as { message?: string };
+      const data = (await response.json()) as {
+        message?: string;
+        downloadUrl?: string;
+      };
 
       if (!response.ok) {
         throw new Error(data.message ?? "Unable to join the waitlist.");
       }
 
       setStatus("success");
-      setMessage(data.message ?? "You're on the list.");
+      setMessage(data.message ?? "Your free AI starter guide is ready.");
       setEmail("");
     } catch (error) {
       setStatus("error");
@@ -57,14 +62,15 @@ export function WaitlistSection() {
     <section id="pricing" className="mx-auto max-w-5xl px-6 py-20 text-center lg:px-10">
       <div className="rounded-[3rem] border border-cyan-200 bg-white p-8 shadow-2xl shadow-cyan-100/60 md:p-14">
         <p className="text-sm font-black uppercase tracking-[0.35em] text-cyan-500">
-          Founding Access
+          Free Starter Guide
         </p>
         <h2 className="mt-4 text-4xl font-black tracking-[-0.04em] md:text-6xl">
-          Open the vault before everyone else.
+          Start using AI with a guide built by someone self-taught.
         </h2>
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-600">
-          Join the early access list for first look templates, launch updates,
-          and founding member pricing.
+          Get the free AI Vault starter guide and learn how to organize tools,
+          prompts, workflows, and repeatable AI assets without needing a tech
+          background.
         </p>
 
         <form
@@ -107,7 +113,7 @@ export function WaitlistSection() {
               </>
             ) : (
               <>
-                Get Access
+                Send My Guide
                 <ArrowRight className="h-5 w-5" />
               </>
             )}
@@ -116,15 +122,26 @@ export function WaitlistSection() {
 
         <div className="mt-4 min-h-6" aria-live="polite">
           {message ? (
-            <p
-              className={
-                status === "error"
-                  ? "text-sm font-semibold text-red-600"
-                  : "text-sm font-semibold text-cyan-700"
-              }
-            >
-              {message}
-            </p>
+            <div>
+              <p
+                className={
+                  status === "error"
+                    ? "text-sm font-semibold text-red-600"
+                    : "text-sm font-semibold text-cyan-700"
+                }
+              >
+                {message}
+              </p>
+              {status === "success" ? (
+                <a
+                  href={starterGuideUrl}
+                  download
+                  className="mt-3 inline-flex rounded-full bg-cyan-500 px-5 py-3 text-sm font-black text-white shadow-lg shadow-cyan-500/20 transition hover:bg-cyan-400"
+                >
+                  Download the Free Starter Guide
+                </a>
+              ) : null}
+            </div>
           ) : null}
         </div>
       </div>

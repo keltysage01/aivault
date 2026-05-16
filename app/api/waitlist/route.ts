@@ -15,9 +15,12 @@ export async function POST(request: Request) {
     }
 
     // Placeholder integration point:
-    // Connect Mailchimp, ConvertKit, Airtable, Supabase, or another waitlist provider here.
+    // Connect Mailchimp, ConvertKit, Airtable, Supabase, or another email provider here.
+    // A production integration should store the email, tag the lead magnet source,
+    // and optionally send the starter guide link in a confirmation email.
     return NextResponse.json({
-      message: "You're on the list. Founding access updates will arrive soon.",
+      message: "You're in. Your free AI starter guide is ready.",
+      downloadUrl: "/the-ai-vault-starter-guide.pdf",
       email,
     });
   } catch {
