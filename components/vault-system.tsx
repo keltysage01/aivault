@@ -1,0 +1,56 @@
+"use client";
+
+import { motion } from "framer-motion";
+
+const systemItems = [
+  "Prompt vault",
+  "Content engines",
+  "Offer builders",
+  "Client workflows",
+  "Automation maps",
+  "Brand voice library",
+];
+
+export function VaultSystem() {
+  return (
+    <section id="vault" className="mx-auto max-w-7xl px-6 py-16 lg:px-10">
+      <div className="rounded-[3rem] bg-vault-slate p-8 text-white shadow-2xl shadow-slate-300/50 md:p-12">
+        <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
+          <motion.div
+            initial={{ opacity: 0, y: 18 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.4 }}
+            transition={{ duration: 0.5 }}
+          >
+            <p className="text-sm font-black uppercase tracking-[0.35em] text-cyan-300">
+              The Vault System
+            </p>
+            <h2 className="mt-4 text-4xl font-black tracking-[-0.04em] md:text-5xl">
+              Secure your ideas. Scale your intelligence.
+            </h2>
+            <p className="mt-5 text-lg leading-8 text-slate-300">
+              The AI Vault turns scattered AI tools into a curated command
+              center for offers, content, automations, client systems, and
+              creative assets.
+            </p>
+          </motion.div>
+
+          <div className="grid gap-4 sm:grid-cols-2">
+            {systemItems.map((item, index) => (
+              <motion.div
+                key={item}
+                initial={{ opacity: 0, y: 14 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.35 }}
+                transition={{ duration: 0.4, delay: index * 0.05 }}
+                className="rounded-3xl border border-white/10 bg-white/[0.07] p-5 font-bold text-white"
+              >
+                {item}
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
