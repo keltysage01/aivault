@@ -19,20 +19,25 @@ npm run build
 
 ## Lead capture and Founder Access
 
-The lead form posts to `app/api/waitlist/route.ts`. It can save guide requests to Airtable and then show the free starter guide plus the Circle Founder Access CTA.
+The lead form posts to `app/api/waitlist/route.ts`. It can save guide requests to Supabase and then show the free starter guide plus the Circle Founder Access CTA.
 
 Set these environment variables in Vercel:
 
 ```bash
-AIRTABLE_API_KEY=
-AIRTABLE_BASE_ID=
-AIRTABLE_TABLE_NAME=
+SUPABASE_URL=
+SUPABASE_SERVICE_ROLE_KEY=
 NEXT_PUBLIC_CIRCLE_URL=
 ```
 
-The Airtable table should include these fields:
+Create this table in Supabase:
 
-- `Email`
-- `Source`
-- `Offer`
-- `Status`
+```sql
+create table if not exists leads (
+  id uuid primary key default gen_random_uuid(),
+  email text not null unique,
+  source text,
+  offer text,
+  status text default 'guide_requested',
+  created_at timestamptz default now()
+);
+```

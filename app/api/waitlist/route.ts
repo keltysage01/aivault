@@ -1,7 +1,6 @@
 import { NextResponse } from "next/server";
 
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-const airtableApiUrl = "https://api.airtable.com/v0";
 
 export async function POST(request: Request) {
   try {
@@ -15,7 +14,7 @@ export async function POST(request: Request) {
       );
     }
 
-    await saveLeadToAirtable(email);
+    await saveLeadToSupabase(email);
 
     return NextResponse.json({
       message: "You're in. Your free AI starter guide is ready.",
@@ -32,41 +31,33 @@ export async function POST(request: Request) {
   }
 }
 
-async function saveLeadToAirtable(email: string) {
-  const apiKey = process.env.AIRTABLE_API_KEY;
-  const baseId = process.env.AIRTABLE_BASE_ID;
-  const tableName = process.env.AIRTABLE_TABLE_NAME;
+async function saveLeadToSupabase(email: string) {
+  const supabaseUrl = process.env.SUPABASE_URL;
+  const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
 
-  if (!apiKey || !baseId || !tableName) {
-    console.warn("Airtable is not configured. Lead was not stored.", { email });
+  if (!supabaseUrl || !serviceRoleKey) {
+    console.warn("Supabase is not configured. Lead was not stored.", { email });
     return;
   }
 
-  const response = await fetch(
-    `${airtableApiUrl}/${baseId}/${encodeURIComponent(tableName)}`,
-    {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${apiKey}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        records: [
-          {
-            fields: {
-              Email: email,
-              Source: "The AI Vault starter guide",
-              Offer: "$10 Founder Circle subscription",
-              Status: "Guide requested",
-            },
-          },
-        ],
-      }),
+  const response = await fetch(`${supabaseUrl}/rest/v1/leads`, {
+    method: "POST",
+    headers: {
+      apikey: serviceRoleKey,
+      Authorization: `Bearer ${serviceRoleKey}`,
+      "Content-Type": "application/json",
+      Prefer: "resolution=merge-duplicates",
     },
-  );
+    body: JSON.stringify({
+      email,
+      source: "The AI Vault starter guide",
+      offer: "$10 Founder Circle subscription",
+      status: "guide_requested",
+    }),
+  });
 
   if (!response.ok) {
     const details = await response.text();
-    throw new Error(`Airtable save failed: ${details}`);
+    throw new Error(`Supabase save failed: ${details}`);
   }
 }
