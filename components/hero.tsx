@@ -5,9 +5,9 @@ import { ArrowRight, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { VaultDashboardPreview } from "@/components/vault-dashboard-preview";
 
-const starterKitUrl = "https://aivault-community.circle.so/c/ai-starter-kit";
+const starterKitUrl = "https://aivault-community.circle.so/join?invitation_token=227a939eb64527adba73d8c46158ed6c37caad37-d49b6959-440f-489c-bb1b-7bf0ea8d51e0";
 const founderCheckoutUrl =
-  "https://aivault-community.circle.so/join?invitation_token=227a939eb64527adba73d8c46158ed6c37caad37-d49b6959-440f-489c-bb1b-7bf0ea8d51e0";
+  "https://aivault-community.circle.so/checkout/join-the-ai-vault";
 
 const stats = [
   ["5 channels", "Active community"],
