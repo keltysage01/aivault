@@ -1,6 +1,9 @@
 import { KeyRound } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+const founderCheckoutUrl =
+  "https://aivault-community.circle.so/checkout/join-the-ai-vault";
+
 const navItems = [
   { label: "Features", href: "#features" },
   { label: "Vault System", href: "#vault" },
@@ -35,7 +38,9 @@ export function Header() {
       </nav>
 
       <Button asChild className="rounded-full px-5 text-white">
-        <a href="#pricing">Join for $10/mo</a>
+        <a href={founderCheckoutUrl} target="_blank" rel="noreferrer">
+          Join for $10/mo
+        </a>
       </Button>
     </header>
   );

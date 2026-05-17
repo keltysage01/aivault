@@ -8,8 +8,9 @@ const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 type Status = "idle" | "loading" | "success" | "error";
 
-const starterGuideUrl = "/the-ai-vault-starter-guide.pdf";
-const circleUrl = process.env.NEXT_PUBLIC_CIRCLE_URL ?? "#";
+const starterKitUrl = "https://aivault-community.circle.so/c/ai-starter-kit";
+const founderCheckoutUrl =
+  "https://aivault-community.circle.so/checkout/join-the-ai-vault";
 
 export function WaitlistSection() {
   const [email, setEmail] = useState("");
@@ -47,7 +48,7 @@ export function WaitlistSection() {
       }
 
       setStatus("success");
-      setMessage(data.message ?? "Your free AI starter guide is ready.");
+      setMessage(data.message ?? "You're on the list. Head into Circle for the free starter kit.");
       setEmail("");
     } catch (error) {
       setStatus("error");
@@ -63,21 +64,22 @@ export function WaitlistSection() {
     <section id="pricing" className="mx-auto max-w-5xl px-6 py-20 text-center lg:px-10">
       <div className="rounded-[3rem] border border-cyan-200 bg-white p-8 shadow-2xl shadow-cyan-100/60 md:p-14">
         <p className="text-sm font-black uppercase tracking-[0.35em] text-cyan-500">
-          Founder Access
+          Free Starter Kit
         </p>
         <h2 className="mt-4 text-4xl font-black tracking-[-0.04em] md:text-6xl">
-          Join The AI Vault Circle for $10/month.
+          Start free inside The AI Vault Circle.
         </h2>
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-600">
-          Founder members get the private community, starter guide, launch
-          updates, and early access to the vault systems as they are released.
+          Get the free AI Starter Kit in Circle, then upgrade to Founder Access
+          for $10/month when you are ready for the private community, vault
+          drops, templates, and deeper workflow systems.
         </p>
 
         <div className="mx-auto mt-7 grid max-w-3xl gap-3 text-left sm:grid-cols-3">
           {[
-            "Private Circle community",
-            "Free AI starter guide",
-            "Founder pricing at $10/month",
+            "Free starter kit in Circle",
+            "Paid private community",
+            "$10/month founder access",
           ].map((item) => (
             <div
               key={item}
@@ -88,9 +90,34 @@ export function WaitlistSection() {
           ))}
         </div>
 
+        <div className="mx-auto mt-8 flex max-w-2xl flex-col justify-center gap-3 sm:flex-row">
+          <Button
+            asChild
+            size="lg"
+            className="rounded-full bg-cyan-500 font-black text-white shadow-lg shadow-cyan-500/20 hover:bg-cyan-400"
+          >
+            <a href={starterKitUrl} target="_blank" rel="noreferrer">
+              Get the Free Starter Kit <ArrowRight className="h-5 w-5" />
+            </a>
+          </Button>
+          <Button
+            asChild
+            size="lg"
+            className="rounded-full bg-vault-slate font-black text-white shadow-lg shadow-slate-400/20 hover:bg-[#243944]"
+          >
+            <a href={founderCheckoutUrl} target="_blank" rel="noreferrer">
+              Join Founder Access for $10/month
+            </a>
+          </Button>
+        </div>
+
+        <p className="mx-auto mt-8 max-w-xl text-sm font-bold uppercase tracking-[0.25em] text-slate-400">
+          Want launch updates first?
+        </p>
+
         <form
           onSubmit={handleSubmit}
-          className="mx-auto mt-8 flex max-w-xl flex-col gap-3 rounded-[2rem] border border-slate-200 bg-slate-50 p-2 shadow-inner sm:flex-row sm:rounded-full"
+          className="mx-auto mt-4 flex max-w-xl flex-col gap-3 rounded-[2rem] border border-slate-200 bg-slate-50 p-2 shadow-inner sm:flex-row sm:rounded-full"
         >
           <label className="sr-only" htmlFor="waitlist-email">
             Email address
@@ -128,7 +155,7 @@ export function WaitlistSection() {
               </>
             ) : (
               <>
-                Send My Guide
+                Keep Me Updated
                 <ArrowRight className="h-5 w-5" />
               </>
             )}
@@ -150,14 +177,15 @@ export function WaitlistSection() {
               {status === "success" ? (
                 <div className="mt-3 flex flex-col items-center justify-center gap-3 sm:flex-row">
                   <a
-                    href={starterGuideUrl}
-                    download
+                    href={starterKitUrl}
+                    target="_blank"
+                    rel="noreferrer"
                     className="inline-flex rounded-full bg-cyan-500 px-5 py-3 text-sm font-black text-white shadow-lg shadow-cyan-500/20 transition hover:bg-cyan-400"
                   >
-                    Download the Free Starter Guide
+                    Open the Free Starter Kit
                   </a>
                   <a
-                    href={circleUrl}
+                    href={founderCheckoutUrl}
                     target="_blank"
                     rel="noreferrer"
                     className="inline-flex rounded-full bg-vault-slate px-5 py-3 text-sm font-black text-white shadow-lg shadow-slate-400/20 transition hover:bg-[#243944]"

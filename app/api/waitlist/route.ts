@@ -17,8 +17,7 @@ export async function POST(request: Request) {
     await saveLeadToSupabase(email);
 
     return NextResponse.json({
-      message: "You're in. Your free AI starter guide is ready.",
-      downloadUrl: "/the-ai-vault-starter-guide.pdf",
+      message: "You're on the list. Head into Circle for the free starter kit.",
       email,
     });
   } catch (error) {

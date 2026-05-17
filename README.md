@@ -19,14 +19,13 @@ npm run build
 
 ## Lead capture and Founder Access
 
-The lead form posts to `app/api/waitlist/route.ts`. It can save guide requests to Supabase and then show the free starter guide plus the Circle Founder Access CTA.
+The lead form posts to `app/api/waitlist/route.ts`. It can save launch-update requests to Supabase while the primary CTAs send visitors into the free Circle starter kit and the paid Founder Access checkout.
 
 Set these environment variables in Vercel:
 
 ```bash
 SUPABASE_URL=
 SUPABASE_SERVICE_ROLE_KEY=
-NEXT_PUBLIC_CIRCLE_URL=
 ```
 
 Create this table in Supabase:

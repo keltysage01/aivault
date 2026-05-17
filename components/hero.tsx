@@ -5,6 +5,10 @@ import { ArrowRight, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { VaultDashboardPreview } from "@/components/vault-dashboard-preview";
 
+const starterKitUrl = "https://aivault-community.circle.so/c/ai-starter-kit";
+const founderCheckoutUrl =
+  "https://aivault-community.circle.so/checkout/join-the-ai-vault";
+
 const stats = [
   ["500+", "AI assets"],
   ["24/7", "Access"],
@@ -25,7 +29,7 @@ export function Hero() {
       >
         <div className="inline-flex items-center gap-2 rounded-full border border-cyan-200 bg-white/80 px-4 py-2 text-sm font-semibold text-slate-600 shadow-sm backdrop-blur">
           <Sparkles className="h-4 w-4 text-cyan-500" />
-          $10/month founder access for self-taught AI builders
+          Free starter kit, paid founder community
         </div>
 
         <div className="space-y-5">
@@ -33,9 +37,9 @@ export function Hero() {
             Your private vault for smarter AI systems.
           </h1>
           <p className="max-w-2xl text-lg leading-8 text-slate-600 md:text-xl">
-            Join a private Circle community for organizing AI tools, prompts,
-            templates, workflows, and repeatable business assets without needing
-            a tech background.
+            Start with the free AI Starter Kit inside Circle, then upgrade to
+            $10/month Founder Access for the private community, vault drops,
+            templates, and workflow systems.
           </p>
         </div>
 
@@ -45,8 +49,8 @@ export function Hero() {
             size="lg"
             className="rounded-full bg-cyan-500 font-bold text-white shadow-lg shadow-cyan-500/20 hover:bg-cyan-400"
           >
-            <a href="#pricing">
-              Get Founder Access <ArrowRight className="h-5 w-5" />
+            <a href={starterKitUrl} target="_blank" rel="noreferrer">
+              Get the Free Starter Kit <ArrowRight className="h-5 w-5" />
             </a>
           </Button>
           <Button
@@ -55,7 +59,9 @@ export function Hero() {
             size="lg"
             className="rounded-full font-bold"
           >
-            <a href="#pricing">Get the Free Guide</a>
+            <a href={founderCheckoutUrl} target="_blank" rel="noreferrer">
+              Join Founder Access
+            </a>
           </Button>
         </div>
 
