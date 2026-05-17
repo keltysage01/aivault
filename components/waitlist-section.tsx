@@ -78,9 +78,9 @@ export function WaitlistSection() {
 
         <div className="mx-auto mt-7 grid max-w-3xl gap-3 text-left sm:grid-cols-3">
           {[
-            "✅ Free AI Starter Kit — no credit card needed",
-            "✅ Founder Access — $10/month, cancel anytime",
-            "✅ Live community — people using AI right now",
+            "Free AI Starter Kit — no credit card needed",
+            "Founder Access — $10/month, cancel anytime",
+            "Live community — people using AI right now",
           ].map((item) => (
             <div
               key={item}

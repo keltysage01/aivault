@@ -2,36 +2,42 @@
 
 import { motion } from "framer-motion";
 import {
+  BookOpen,
+  CircleHelp,
   Lock,
+  ShieldAlert,
+  Wrench,
+  Zap,
+  type LucideIcon,
 } from "lucide-react";
 
 const vaultItems: Array<{
-  icon: string;
+  icon: LucideIcon;
   title: string;
   description: string;
 }> = [
   {
-    icon: "📓",
+    icon: BookOpen,
     title: "Prompt Vault",
     description: "Community-sourced prompts that save real time",
   },
   {
-    icon: "🛠",
+    icon: Wrench,
     title: "Tool Talk",
     description: "Honest takes on the AI tools actually worth using",
   },
   {
-    icon: "🔒",
+    icon: ShieldAlert,
     title: "Risk Radar",
     description: "Know what not to feed your AI — stay safe",
   },
   {
-    icon: "⚡",
+    icon: Zap,
     title: "The Daily Move",
     description: "One 3-minute AI skill dropped every day",
   },
   {
-    icon: "❓",
+    icon: CircleHelp,
     title: "Ask the Vault",
     description: "Get real answers from people using AI in their work",
   },
@@ -61,16 +67,14 @@ export function VaultDashboardPreview() {
           </div>
 
           <div className="grid gap-4">
-            {vaultItems.map(({ icon, title, description }) => (
+            {vaultItems.map(({ icon: Icon, title, description }) => (
               <div
                 key={title}
                 className="rounded-3xl border border-white/10 bg-white/[0.07] p-5"
               >
                   <div className="flex gap-4">
                     <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-cyan-400/15">
-                      <span className="text-lg" aria-hidden="true">
-                        {icon}
-                      </span>
+                      <Icon className="h-5 w-5 text-cyan-300" />
                     </div>
                   <div>
                     <h3 className="font-bold text-white">{title}</h3>
