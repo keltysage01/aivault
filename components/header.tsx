@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 
 const founderCheckoutUrl =
-  "https://aivault-community.circle.so/checkout/join-the-ai-vault";
+  "https://aivault-community.circle.so/join?invitation_token=227a939eb64527adba73d8c46158ed6c37caad37-d49b6959-440f-489c-bb1b-7bf0ea8d51e0";
 
 const navItems = [
   { label: "Features", href: "#features" },

@@ -10,7 +10,7 @@ type Status = "idle" | "loading" | "success" | "error";
 
 const starterKitUrl = "https://aivault-community.circle.so/c/ai-starter-kit";
 const founderCheckoutUrl =
-  "https://aivault-community.circle.so/checkout/join-the-ai-vault";
+  "https://aivault-community.circle.so/join?invitation_token=227a939eb64527adba73d8c46158ed6c37caad37-d49b6959-440f-489c-bb1b-7bf0ea8d51e0";
 
 export function WaitlistSection() {
   const [email, setEmail] = useState("");
