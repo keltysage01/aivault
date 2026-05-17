@@ -3,12 +3,14 @@
 import { motion } from "framer-motion";
 
 const systemItems = [
-  "Prompt vault",
-  "Content engines",
-  "Offer builders",
-  "Client workflows",
-  "Automation maps",
-  "Brand voice library",
+  "Prompt Vault",
+  "Tool Talk",
+  "Risk Radar",
+  "The Daily Move",
+  "Ask the Vault",
+  "AI Starter Kit",
+  "Founder Courses",
+  "Live Sessions",
 ];
 
 export function VaultSystem() {
@@ -23,15 +25,15 @@ export function VaultSystem() {
             transition={{ duration: 0.5 }}
           >
             <p className="text-sm font-black uppercase tracking-[0.35em] text-cyan-300">
-              The Vault System
+              Inside the Vault
             </p>
             <h2 className="mt-4 text-4xl font-black tracking-[-0.04em] md:text-5xl">
-              Secure your ideas. Scale your intelligence.
+              Everything you need to use AI like a pro.
             </h2>
             <p className="mt-5 text-lg leading-8 text-slate-300">
-              The AI Vault turns scattered AI tools into a curated command
-              center for offers, content, automations, client systems, and
-              creative assets.
+              The AI Vault Circle brings together the prompts, tools, safety
+              tips, and daily practice that turn AI confusion into real results
+              — all in one private community.
             </p>
           </motion.div>
 

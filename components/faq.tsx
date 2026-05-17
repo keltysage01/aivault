@@ -2,27 +2,27 @@ const faqs = [
   {
     question: "What is The AI Vault?",
     answer:
-      "The AI Vault is a private, premium workspace for organizing AI tools, prompts, templates, workflows, content systems, business intelligence, and repeatable AI assets.",
+      "The AI Vault is a private community for people who want to use AI better in their work. It includes a Prompt Vault, Tool Talk channel, Risk Radar, daily AI moves, and a place to ask anything — all inside Circle. A premium AI asset workspace is also in development.",
   },
   {
     question: "Who is this for?",
     answer:
-      "It is built for creators, entrepreneurs, service providers, and modern business owners who want their best AI assets organized instead of scattered across chats, notes, docs, and screenshots.",
+      "It's built for creators, entrepreneurs, service providers, and business owners who are already using AI tools like ChatGPT, Claude, or Midjourney but want to go deeper — with better prompts, smarter workflows, and a community who gets it.",
   },
   {
     question: "What will be inside the vault?",
     answer:
-      "Expect prompt libraries, workflow maps, content engines, offer builders, brand voice systems, client process templates, automation ideas, and practical AI operating assets.",
+      "The live Circle community already includes the Prompt Vault (community-sourced prompts), Tool Talk (AI tool recommendations), Risk Radar (AI safety tips), The Daily Move (a 3-minute AI skill every day), and Ask the Vault (community Q&A). Courses and workflow templates are coming.",
   },
   {
     question: "Is this a full AI app?",
     answer:
-      "Not yet. The first version is a beautiful landing page and waitlist for a premium AI asset workspace. The waitlist will guide launch access and future product direction.",
+      "The full AI asset workspace is still in development. But the Circle community is live now and growing. You can join free today and start getting value immediately.",
   },
   {
     question: "When will founding access open?",
     answer:
-      "Founding access will open after the first private vault experience is ready. Joining the waitlist is the best way to get launch updates and early pricing.",
+      "Founder Access is open right now at $10/month. Join today to lock in founding pricing before it increases. Cancel anytime.",
   },
 ];
 

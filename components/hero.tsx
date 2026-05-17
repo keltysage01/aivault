@@ -10,9 +10,9 @@ const founderCheckoutUrl =
   "https://aivault-community.circle.so/checkout/join-the-ai-vault";
 
 const stats = [
-  ["500+", "AI assets"],
-  ["24/7", "Access"],
-  ["Secure", "Systems"],
+  ["5 channels", "Active community"],
+  ["Daily", "New AI moves"],
+  ["$10/mo", "Founder access"],
 ];
 
 export function Hero() {
@@ -29,17 +29,18 @@ export function Hero() {
       >
         <div className="inline-flex items-center gap-2 rounded-full border border-cyan-200 bg-white/80 px-4 py-2 text-sm font-semibold text-slate-600 shadow-sm backdrop-blur">
           <Sparkles className="h-4 w-4 text-cyan-500" />
-          Free starter kit, paid founder community
+          The community is live. The vault is open.
         </div>
 
         <div className="space-y-5">
           <h1 className="max-w-3xl text-5xl font-black leading-[0.95] tracking-[-0.06em] text-vault-slate md:text-7xl">
-            Your private vault for smarter AI systems.
+            Stop guessing with AI. Start getting results.
           </h1>
           <p className="max-w-2xl text-lg leading-8 text-slate-600 md:text-xl">
-            Start with the free AI Starter Kit inside Circle, then upgrade to
-            $10/month Founder Access for the private community, vault drops,
-            templates, and workflow systems.
+            The AI Vault is a private community for people who want to use AI
+            better — not just talk about it. Get curated prompts, the best
+            tools, daily AI moves, and answers to your real questions. Start
+            free, go deeper for $10/month.
           </p>
         </div>
 

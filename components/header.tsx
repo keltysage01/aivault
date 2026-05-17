@@ -35,7 +35,7 @@ export function Header() {
 
       <Button asChild className="rounded-full px-5 text-white">
         <a href={founderCheckoutUrl} target="_blank" rel="noreferrer">
-          Join for $10/mo
+          Join for $10/month
         </a>
       </Button>
     </header>

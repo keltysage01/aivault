@@ -8,7 +8,7 @@ export function Footer() {
           className="h-12 w-auto max-w-[180px] object-contain"
         />
         <div>
-          <p>Private AI assets, systems, and intelligence.</p>
+          <p>The private community for people who use AI to get real work done.</p>
         </div>
       </div>
       <p>© {new Date().getFullYear()} The AI Vault. All rights reserved.</p>

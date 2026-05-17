@@ -6,16 +6,16 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const features = [
   [
-    "Save your best prompts",
-    "No more digging through notes, chats, docs, or screenshots.",
+    "Real prompts, not theory",
+    "Every prompt in the Vault is community-tested and shared with exactly how it's used.",
   ],
   [
-    "Build repeatable systems",
-    "Turn random AI ideas into organized workflows your business can actually use.",
+    "Tools worth your time",
+    "Tool Talk cuts through the noise. Find out what's actually worth using before you waste hours on it.",
   ],
   [
-    "Create faster with clarity",
-    "Everything is categorized, searchable, and ready when inspiration hits.",
+    "Safe and practical",
+    "Risk Radar keeps you from making costly AI mistakes with client data, privacy, and security.",
   ],
 ];
 
@@ -24,10 +24,10 @@ export function Features() {
     <section id="features" className="mx-auto max-w-7xl px-6 py-16 lg:px-10">
       <div className="mb-10 max-w-3xl">
         <p className="text-sm font-black uppercase tracking-[0.35em] text-cyan-500">
-          Beautiful and useful
+          Why it works
         </p>
         <h2 className="mt-4 text-4xl font-black tracking-[-0.04em] md:text-5xl">
-          A clean vault experience that makes AI feel simple.
+          A community that gives you AI that actually works for you.
         </h2>
       </div>
 

@@ -64,22 +64,23 @@ export function WaitlistSection() {
     <section id="pricing" className="mx-auto max-w-5xl px-6 py-20 text-center lg:px-10">
       <div className="rounded-[3rem] border border-cyan-200 bg-white p-8 shadow-2xl shadow-cyan-100/60 md:p-14">
         <p className="text-sm font-black uppercase tracking-[0.35em] text-cyan-500">
-          Free Starter Kit
+          Community is live
         </p>
         <h2 className="mt-4 text-4xl font-black tracking-[-0.04em] md:text-6xl">
-          Start free inside The AI Vault Circle.
+          The vault is already open. Get inside.
         </h2>
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-600">
-          Get the free AI Starter Kit in Circle, then upgrade to Founder Access
-          for $10/month when you are ready for the private community, vault
-          drops, templates, and deeper workflow systems.
+          While the full workspace is in development, The AI Vault Circle is
+          live and growing. Start free with the AI Starter Kit, then unlock the
+          full community — Prompt Vault, Tool Talk, Risk Radar, Daily Moves, and
+          more — for $10/month.
         </p>
 
         <div className="mx-auto mt-7 grid max-w-3xl gap-3 text-left sm:grid-cols-3">
           {[
-            "Free starter kit in Circle",
-            "Paid private community",
-            "$10/month founder access",
+            "✅ Free AI Starter Kit — no credit card needed",
+            "✅ Founder Access — $10/month, cancel anytime",
+            "✅ Live community — people using AI right now",
           ].map((item) => (
             <div
               key={item}
@@ -112,7 +113,7 @@ export function WaitlistSection() {
         </div>
 
         <p className="mx-auto mt-8 max-w-xl text-sm font-bold uppercase tracking-[0.25em] text-slate-400">
-          Want launch updates first?
+          Get notified when new vault drops go live:
         </p>
 
         <form
