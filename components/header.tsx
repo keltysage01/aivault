@@ -12,7 +12,7 @@ const navItems = [
 
 export function Header() {
   return (
-    <header className="relative z-10 mx-auto flex max-w-7xl items-center justify-between gap-5 px-6 py-6 lg:px-10">
+    <header className="relative z-10 mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-6 sm:gap-5 sm:px-6 lg:px-10">
       <a
         href="#top"
         className="flex min-w-0 items-center"
@@ -21,7 +21,7 @@ export function Header() {
         <img
           src="/the-ai-vault-logo.png"
           alt="The AI Vault"
-          className="h-14 w-auto max-w-[190px] object-contain sm:h-16 sm:max-w-[230px]"
+          className="h-12 w-auto max-w-[140px] object-contain min-[360px]:max-w-[170px] sm:h-16 sm:max-w-[230px]"
         />
       </a>
 
@@ -33,7 +33,7 @@ export function Header() {
         ))}
       </nav>
 
-      <Button asChild className="rounded-full px-5 text-white">
+      <Button asChild className="h-9 rounded-full px-3 text-xs text-white min-[360px]:px-4 sm:h-10 sm:px-5 sm:text-sm">
         <a href={founderCheckoutUrl} target="_blank" rel="noreferrer">
           Join for $10/month
         </a>

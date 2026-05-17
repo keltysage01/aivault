@@ -19,7 +19,7 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="mx-auto grid max-w-7xl items-center gap-12 px-6 pb-20 pt-10 lg:grid-cols-[1.05fr_0.95fr] lg:px-10 lg:pt-20"
+      className="mx-auto grid max-w-7xl items-center gap-12 px-4 pb-20 pt-8 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:px-10 lg:pt-20"
     >
       <motion.div
         initial={{ opacity: 0, y: 24 }}
@@ -27,16 +27,16 @@ export function Hero() {
         transition={{ duration: 0.7 }}
         className="space-y-8"
       >
-        <div className="inline-flex items-center gap-2 rounded-full border border-cyan-200 bg-white/80 px-4 py-2 text-sm font-semibold text-slate-600 shadow-sm backdrop-blur">
-          <Sparkles className="h-4 w-4 text-cyan-500" />
-          The community is live. The vault is open.
+        <div className="inline-flex max-w-full items-center gap-2 rounded-full border border-cyan-200 bg-white/80 px-4 py-2 text-sm font-semibold leading-5 text-slate-600 shadow-sm backdrop-blur">
+          <Sparkles className="h-4 w-4 shrink-0 text-cyan-500" />
+          <span>The community is live. The vault is open.</span>
         </div>
 
         <div className="space-y-5">
-          <h1 className="max-w-3xl text-5xl font-black leading-[0.95] tracking-[-0.06em] text-vault-slate md:text-7xl">
+          <h1 className="max-w-3xl text-[2.75rem] font-black leading-[0.98] tracking-[-0.04em] text-vault-slate min-[390px]:text-5xl md:text-7xl md:leading-[0.95] md:tracking-[-0.06em]">
             Stop guessing with AI. Start getting results.
           </h1>
-          <p className="max-w-2xl text-lg leading-8 text-slate-600 md:text-xl">
+          <p className="max-w-2xl text-base leading-7 text-slate-600 sm:text-lg sm:leading-8 md:text-xl">
             The AI Vault is a private community for people who want to use AI
             better — not just talk about it. Get curated prompts, the best
             tools, daily AI moves, and answers to your real questions. Start
@@ -48,7 +48,7 @@ export function Hero() {
           <Button
             asChild
             size="lg"
-            className="rounded-full bg-cyan-500 font-bold text-white shadow-lg shadow-cyan-500/20 hover:bg-cyan-400"
+            className="w-full rounded-full bg-cyan-500 px-5 font-bold text-white shadow-lg shadow-cyan-500/20 hover:bg-cyan-400 sm:w-auto sm:px-7"
           >
             <a href={starterKitUrl} target="_blank" rel="noreferrer">
               Get the Free Starter Kit <ArrowRight className="h-5 w-5" />
@@ -58,7 +58,7 @@ export function Hero() {
             asChild
             variant="outline"
             size="lg"
-            className="rounded-full font-bold"
+            className="w-full rounded-full px-5 font-bold sm:w-auto sm:px-7"
           >
             <a href={founderCheckoutUrl} target="_blank" rel="noreferrer">
               Join Founder Access
@@ -66,14 +66,18 @@ export function Hero() {
           </Button>
         </div>
 
-        <div className="grid max-w-xl grid-cols-3 gap-3 pt-4 sm:gap-4">
+        <div className="grid max-w-xl grid-cols-1 gap-3 pt-4 min-[380px]:grid-cols-3 sm:gap-4">
           {stats.map(([stat, label]) => (
             <div
               key={stat}
-              className="rounded-3xl border border-slate-200 bg-white/80 p-4 shadow-sm backdrop-blur"
+              className="min-w-0 rounded-3xl border border-slate-200 bg-white/80 p-4 text-center shadow-sm backdrop-blur min-[380px]:text-left"
             >
-              <p className="text-2xl font-black text-vault-slate">{stat}</p>
-              <p className="text-sm font-medium text-slate-500">{label}</p>
+              <p className="break-words text-xl font-black leading-tight text-vault-slate sm:text-2xl">
+                {stat}
+              </p>
+              <p className="mt-1 text-sm font-medium leading-5 text-slate-500">
+                {label}
+              </p>
             </div>
           ))}
         </div>
