@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 const navItems = [
   { label: "Features", href: "#features" },
   { label: "Vault System", href: "#vault" },
-  { label: "Free Guide", href: "#pricing" },
+  { label: "Founder Access", href: "#pricing" },
   { label: "FAQ", href: "#faq" },
 ];
 
@@ -35,7 +35,7 @@ export function Header() {
       </nav>
 
       <Button asChild className="rounded-full px-5 text-white">
-        <a href="#pricing">Get the Guide</a>
+        <a href="#pricing">Join for $10/mo</a>
       </Button>
     </header>
   );

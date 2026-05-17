@@ -25,7 +25,7 @@ export function Hero() {
       >
         <div className="inline-flex items-center gap-2 rounded-full border border-cyan-200 bg-white/80 px-4 py-2 text-sm font-semibold text-slate-600 shadow-sm backdrop-blur">
           <Sparkles className="h-4 w-4 text-cyan-500" />
-          Free starter guide for self-taught AI builders
+          $10/month founder access for self-taught AI builders
         </div>
 
         <div className="space-y-5">
@@ -33,9 +33,9 @@ export function Hero() {
             Your private vault for smarter AI systems.
           </h1>
           <p className="max-w-2xl text-lg leading-8 text-slate-600 md:text-xl">
-            Store, organize, and unlock powerful AI assets in one secure,
-            beautiful workspace built for creators, entrepreneurs, and modern
-            businesses.
+            Join a private Circle community for organizing AI tools, prompts,
+            templates, workflows, and repeatable business assets without needing
+            a tech background.
           </p>
         </div>
 
@@ -46,7 +46,7 @@ export function Hero() {
             className="rounded-full bg-cyan-500 font-bold text-white shadow-lg shadow-cyan-500/20 hover:bg-cyan-400"
           >
             <a href="#pricing">
-              Get the Free Guide <ArrowRight className="h-5 w-5" />
+              Get Founder Access <ArrowRight className="h-5 w-5" />
             </a>
           </Button>
           <Button
@@ -55,7 +55,7 @@ export function Hero() {
             size="lg"
             className="rounded-full font-bold"
           >
-            <a href="#features">See What Is Inside</a>
+            <a href="#pricing">Get the Free Guide</a>
           </Button>
         </div>
 

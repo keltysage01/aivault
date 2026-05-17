@@ -9,6 +9,7 @@ const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 type Status = "idle" | "loading" | "success" | "error";
 
 const starterGuideUrl = "/the-ai-vault-starter-guide.pdf";
+const circleUrl = process.env.NEXT_PUBLIC_CIRCLE_URL ?? "#";
 
 export function WaitlistSection() {
   const [email, setEmail] = useState("");
@@ -62,16 +63,30 @@ export function WaitlistSection() {
     <section id="pricing" className="mx-auto max-w-5xl px-6 py-20 text-center lg:px-10">
       <div className="rounded-[3rem] border border-cyan-200 bg-white p-8 shadow-2xl shadow-cyan-100/60 md:p-14">
         <p className="text-sm font-black uppercase tracking-[0.35em] text-cyan-500">
-          Free Starter Guide
+          Founder Access
         </p>
         <h2 className="mt-4 text-4xl font-black tracking-[-0.04em] md:text-6xl">
-          Start using AI with a guide built by someone self-taught.
+          Join The AI Vault Circle for $10/month.
         </h2>
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-600">
-          Get the free AI Vault starter guide and learn how to organize tools,
-          prompts, workflows, and repeatable AI assets without needing a tech
-          background.
+          Founder members get the private community, starter guide, launch
+          updates, and early access to the vault systems as they are released.
         </p>
+
+        <div className="mx-auto mt-7 grid max-w-3xl gap-3 text-left sm:grid-cols-3">
+          {[
+            "Private Circle community",
+            "Free AI starter guide",
+            "Founder pricing at $10/month",
+          ].map((item) => (
+            <div
+              key={item}
+              className="rounded-3xl border border-slate-200 bg-slate-50 px-5 py-4 text-sm font-black text-vault-slate"
+            >
+              {item}
+            </div>
+          ))}
+        </div>
 
         <form
           onSubmit={handleSubmit}
@@ -133,13 +148,23 @@ export function WaitlistSection() {
                 {message}
               </p>
               {status === "success" ? (
-                <a
-                  href={starterGuideUrl}
-                  download
-                  className="mt-3 inline-flex rounded-full bg-cyan-500 px-5 py-3 text-sm font-black text-white shadow-lg shadow-cyan-500/20 transition hover:bg-cyan-400"
-                >
-                  Download the Free Starter Guide
-                </a>
+                <div className="mt-3 flex flex-col items-center justify-center gap-3 sm:flex-row">
+                  <a
+                    href={starterGuideUrl}
+                    download
+                    className="inline-flex rounded-full bg-cyan-500 px-5 py-3 text-sm font-black text-white shadow-lg shadow-cyan-500/20 transition hover:bg-cyan-400"
+                  >
+                    Download the Free Starter Guide
+                  </a>
+                  <a
+                    href={circleUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex rounded-full bg-vault-slate px-5 py-3 text-sm font-black text-white shadow-lg shadow-slate-400/20 transition hover:bg-[#243944]"
+                  >
+                    Join Founder Access for $10/month
+                  </a>
+                </div>
               ) : null}
             </div>
           ) : null}

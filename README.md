@@ -17,6 +17,22 @@ Open `http://localhost:3000`.
 npm run build
 ```
 
-## Waitlist integration
+## Lead capture and Founder Access
 
-The waitlist form posts to `app/api/waitlist/route.ts`. Replace the placeholder success response with Mailchimp, ConvertKit, Airtable, Supabase, or another provider integration when ready.
+The lead form posts to `app/api/waitlist/route.ts`. It can save guide requests to Airtable and then show the free starter guide plus the Circle Founder Access CTA.
+
+Set these environment variables in Vercel:
+
+```bash
+AIRTABLE_API_KEY=
+AIRTABLE_BASE_ID=
+AIRTABLE_TABLE_NAME=
+NEXT_PUBLIC_CIRCLE_URL=
+```
+
+The Airtable table should include these fields:
+
+- `Email`
+- `Source`
+- `Offer`
+- `Status`
