@@ -126,25 +126,4 @@ export function WaitlistSection() {
               <p
                 className={
                   status === "error"
-                    ? "text-sm font-semibold text-red-600"
-                    : "text-sm font-semibold text-cyan-700"
-                }
-              >
-                {message}
-              </p>
-              {status === "success" ? (
-                <a
-                  href={starterGuideUrl}
-                  download
-                  className="mt-3 inline-flex rounded-full bg-cyan-500 px-5 py-3 text-sm font-black text-white shadow-lg shadow-cyan-500/20 transition hover:bg-cyan-400"
-                >
-                  Download the Free Starter Guide
-                </a>
-              ) : null}
-            </div>
-          ) : null}
-        </div>
-      </div>
-    </section>
-  );
-}
+                    ? 

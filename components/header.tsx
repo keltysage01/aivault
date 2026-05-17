@@ -39,4 +39,3 @@ export function Header() {
       </Button>
     </header>
   );
-}
