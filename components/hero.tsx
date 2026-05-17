@@ -33,10 +33,10 @@ export function Hero() {
         </div>
 
         <div className="space-y-5">
-          <h1 className="max-w-3xl text-[2.75rem] font-black leading-[0.98] tracking-[-0.04em] text-vault-slate min-[390px]:text-5xl md:text-7xl md:leading-[0.95] md:tracking-[-0.06em]">
+          <h1 className="max-w-3xl text-[2.45rem] font-black leading-[1.02] tracking-[-0.03em] text-vault-slate sm:text-5xl md:text-7xl md:leading-[0.95] md:tracking-[-0.06em]">
             Stop guessing with AI. Start getting results.
           </h1>
-          <p className="max-w-2xl text-base leading-7 text-slate-600 sm:text-lg sm:leading-8 md:text-xl">
+          <p className="max-w-2xl text-[0.96rem] leading-7 text-slate-600 sm:text-lg sm:leading-8 md:text-xl">
             The AI Vault is a private community for people who want to use AI
             better — not just talk about it. Get curated prompts, the best
             tools, daily AI moves, and answers to your real questions. Start
@@ -66,11 +66,11 @@ export function Hero() {
           </Button>
         </div>
 
-        <div className="grid max-w-xl grid-cols-1 gap-3 pt-4 min-[380px]:grid-cols-3 sm:gap-4">
+        <div className="grid max-w-xl grid-cols-1 gap-3 pt-4 sm:grid-cols-3 sm:gap-4">
           {stats.map(([stat, label]) => (
             <div
               key={stat}
-              className="min-w-0 rounded-3xl border border-slate-200 bg-white/80 p-4 text-center shadow-sm backdrop-blur min-[380px]:text-left"
+              className="min-w-0 rounded-3xl border border-slate-200 bg-white/80 p-4 text-center shadow-sm backdrop-blur sm:text-left"
             >
               <p className="break-words text-xl font-black leading-tight text-vault-slate sm:text-2xl">
                 {stat}

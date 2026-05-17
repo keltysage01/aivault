@@ -26,7 +26,7 @@ export function Features() {
         <p className="text-sm font-black uppercase tracking-[0.35em] text-cyan-500">
           Why it works
         </p>
-        <h2 className="mt-4 text-4xl font-black tracking-[-0.04em] md:text-5xl">
+        <h2 className="mt-4 text-[2rem] font-black leading-tight tracking-[-0.03em] sm:text-4xl md:text-5xl md:tracking-[-0.04em]">
           A community that gives you AI that actually works for you.
         </h2>
       </div>

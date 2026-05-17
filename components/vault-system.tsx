@@ -27,10 +27,10 @@ export function VaultSystem() {
             <p className="text-sm font-black uppercase tracking-[0.35em] text-cyan-300">
               Inside the Vault
             </p>
-            <h2 className="mt-4 text-4xl font-black tracking-[-0.04em] md:text-5xl">
+            <h2 className="mt-4 text-[2rem] font-black leading-tight tracking-[-0.03em] sm:text-4xl md:text-5xl md:tracking-[-0.04em]">
               Everything you need to use AI like a pro.
             </h2>
-            <p className="mt-5 text-lg leading-8 text-slate-300">
+            <p className="mt-5 text-base leading-7 text-slate-300 sm:text-lg sm:leading-8">
               The AI Vault Circle brings together the prompts, tools, safety
               tips, and daily practice that turn AI confusion into real results
               — all in one private community.
