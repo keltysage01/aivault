@@ -4,6 +4,7 @@ import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { Hero } from "@/components/hero";
 import { VaultSystem } from "@/components/vault-system";
+import { VideoSection } from "@/components/video-section";
 import { WaitlistSection } from "@/components/waitlist-section";
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
 
       <main className="relative z-10">
         <Hero />
+        <VideoSection />
         <Features />
         <VaultSystem />
         <WaitlistSection />
